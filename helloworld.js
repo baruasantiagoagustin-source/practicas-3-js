@@ -1,4 +1,4 @@
-const day = 3;
+const day = 7;
 
 switch (day) {	
   case 1:	
