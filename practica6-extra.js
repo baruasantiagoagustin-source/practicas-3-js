@@ -19,3 +19,9 @@ for (var i = 0; i < 3; i++) {
 //¿Por qué los 3 callbacks leen el mismo i en lugar de cada uno tener "su propio" i?
 
 // - existe solo un i, por lo que se va a leer siempre el mismo.
+
+for (let i = 0; i < 3; i++) {
+  setTimeout(function() {
+    console.log(i);
+  }, 100);
+}
