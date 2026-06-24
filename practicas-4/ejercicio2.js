@@ -16,3 +16,7 @@ for (const seleccion of selecciones) {
 }
 
 //parte C
+// ¿Cuándo conviene usar for con índice?
+// Cuando se necesita control total y granular sobre la iteración.
+// ¿Cuándo conviene usar for...of?
+// Cuando se usan arrays, porque al final el codigo queda mas legible y rapido de acceder.
