@@ -12,7 +12,7 @@ const selecciones = ["Argentina", "Francia", "Brasil", "Alemania", "España"];
 let i = 1;
 for (const seleccion of selecciones) {
     console.log(i, seleccion);
-    i = i+1;
+    i++;
 }
 
 //parte C
