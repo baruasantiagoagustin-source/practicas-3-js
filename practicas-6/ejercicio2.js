@@ -33,4 +33,6 @@ const jugadores = [
 
 // Parte D.
 
+const primero = jugadores.find(j => j.pais === 'Francia');
 
+console.log(primero)
