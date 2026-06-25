@@ -11,8 +11,9 @@
 function saludar(nombre, idioma) {
     if (idioma == 'en') {
         console.log(`Hello, ${nombre}`)
+    } else {
+        console.log(`Hola, ${nombre}`) // lo dejo por fuera para que sea el por defecto
     }
-    console.log(`Hola, ${nombre}`) // lo dejo por fuera para que sea el por defecto
 }
 
 saludar("Ana");          // "Hola, Ana"
