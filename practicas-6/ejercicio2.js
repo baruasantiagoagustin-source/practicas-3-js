@@ -12,7 +12,7 @@ const jugadores = [
 
 //parte A
 
-// const goleadores = jugadores.filter(jugador => jugador.goles > 2); 
+// const goleadores = jugadores.filter(jugador => jugador.goles > 2);
 
 // console.log(nombresJugadores);
 
@@ -25,14 +25,14 @@ const jugadores = [
 
 //Parte C.
 
-// const goleadores = jugadores.filter(jugador => jugador.goles > 2); // filtramos los jugadores que tienen más de 2 goles
+// const goleadores = jugadores.filter(jugador => jugador.goles > 2).map(jugador => jugador.nombre); // filtramos los jugadores que tienen más de 2 goles y luego usamos map en esta misma funcion para que se guarden solo los nombres
 
-// const nombresJugadores = goleadores.map(jugador => jugador.nombre); //y con map, nos quedamos solo los nombres.
-
-// console.log(nombresJugadores);
+// console.log(goleadores);
 
 // Parte D.
 
 const primero = jugadores.find(j => j.pais === 'Francia');
 
 console.log(primero)
+
+//Para responder la pregunta, find solo devuelve el primer resultado, mientras que filter devuelve todos los que cumplen la condicion dada.
