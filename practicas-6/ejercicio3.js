@@ -32,6 +32,6 @@ const jugadores = [
 
 const primero = jugadores.find(j => j.pais === 'Francia');
 
-console.log(primero)
+console.log(primero);
 
 //como puse en el anterior ejercicio, find solo devuelve el primer resultado, mientras que filter devuelve todos los que cumplen la condicion dada.

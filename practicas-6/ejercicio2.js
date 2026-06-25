@@ -14,7 +14,7 @@ const jugadores = [
 
 // const goleadores = jugadores.filter(jugador => jugador.goles > 2);
 
-// console.log(nombresJugadores);
+// console.log(goleadores);
 
 
 //parte B
