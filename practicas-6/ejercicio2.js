@@ -9,6 +9,6 @@ const jugadores = [
   { nombre: "Müller",   goles: 0,  pais: "Alemania"  },
 ];
 
-const goleadores = jugadores.filter(jugador => jugador.goles > 2)
+const goleadores = jugadores.filter(jugador => jugador.goles > 2) //filtramos los jugadores, tomando cada uno de los elementos del array y con el valor goles tomando los que superan 2 goles.
 
 console.log(goleadores)
