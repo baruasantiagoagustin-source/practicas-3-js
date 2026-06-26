@@ -39,6 +39,7 @@
     const busqueda = document.getElementById("busqueda");
     const listaEquipos = document.getElementById("lista-equipos");
     const equipos = Array.from(listaEquipos.getElementsByTagName("li"));
+
     busqueda.addEventListener("input", () => {
       const texto = busqueda.value.toLowerCase().trim();
 
@@ -48,6 +49,12 @@
       });
     });
   </script>
+  <!--
+    Este script conecta el input de búsqueda con la lista de equipos.
+    Cada vez que alguien escribe, se captura el texto ingresado letra por letra.
+    Luego se compara con el nombre de cada elemento de la lista.
+    Si coincide, se muestra en pantalla, si no, se oculta con un display = "none".
+  -->
 </body>
 
 </html>
