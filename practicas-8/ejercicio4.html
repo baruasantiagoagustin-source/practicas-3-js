@@ -1,0 +1,58 @@
+<head>
+    <title>La app</title>
+</head>
+
+<body>
+
+    <div id="contenedor"></div>
+
+    <style>
+        .tarjeta {
+            width: 500px;
+            background-color: gray;
+            padding: 8px;
+            margin: 10px;
+        }
+
+        .destacado {
+            background-color: gold;
+        }
+    </style>
+
+    <script>
+        const contenedor = document.getElementById("contenedor");
+
+        const jugadores = [
+            { nombre: "Messi", pais: "🇦🇷 Argentina", goles: 8 },
+            { nombre: "Haaland", pais: "🇳🇴 Noruega", goles: 12 },
+            { nombre: "Mbappé", pais: "🇫🇷 Francia", goles: 5 },
+            { nombre: "Kane", pais: "🏴 Inglaterra", goles: 2 },
+        ];
+
+        for (const jugador of jugadores) {
+
+            const tarjeta = document.createElement("div");
+            tarjeta.classList.add("tarjeta");
+
+            if (jugador.goles > 5) {
+                tarjeta.classList.add("destacado");
+            }
+
+            const titulo = document.createElement("h2");
+            titulo.textContent = jugador.nombre;
+
+            const pais = document.createElement("p");
+            pais.textContent = jugador.pais;
+
+            const goles = document.createElement("p");
+            goles.textContent = "Goles: " + jugador.goles;
+
+            tarjeta.appendChild(titulo);
+            tarjeta.appendChild(pais);
+            tarjeta.appendChild(goles);
+
+            contenedor.appendChild(tarjeta);
+        }
+    </script>
+
+</body>
