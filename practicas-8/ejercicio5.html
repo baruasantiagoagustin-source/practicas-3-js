@@ -36,8 +36,17 @@
   </section>
 
   <script>
-    const busqueda = document
-    const = addEventListener()
+    const busqueda = document.getElementById("busqueda");
+    const listaEquipos = document.getElementById("lista-equipos");
+    const equipos = Array.from(listaEquipos.getElementsByTagName("li"));
+    busqueda.addEventListener("input", () => {
+      const texto = busqueda.value.toLowerCase().trim();
+
+      equipos.forEach((equipo) => {
+        const nombre = equipo.textContent.toLowerCase();
+        equipo.style.display = nombre.includes(texto) ? "" : "none";
+      });
+    });
   </script>
 </body>
 
