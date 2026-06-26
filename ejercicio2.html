@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulación del DOM</title>
+
+  <style>
+    .destacado {
+      background-color: yellow;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Título original</h1>
+
+  <p id="primero">Este es el primer párrafo.</p>
+  <p>Este es el segundo párrafo.</p>
+  <p id="ultimo">Este es el último párrafo.</p>
+
+  <script>
+    const h1 = document.querySelector("h1");
+    h1.textContent = "JavaScript puede cambiar todo";
+
+    const primero = document.querySelector("#primero");
+    primero.classList.add("destacado");
+
+    const ultimo = document.querySelector("#ultimo");
+    ultimo.style.color = "tomato";
+  </script>
+
+</body>
+
+</html>
