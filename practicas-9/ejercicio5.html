@@ -61,10 +61,10 @@
     const items = Array.from(ul.querySelectorAll('li'));
 
     buscador.addEventListener('input', () => {
-      const texto = buscador.value.toLowerCase();
+      const texto = buscador.value.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '');
 
       items.forEach((item) => {
-        const nombre = item.textContent.toLowerCase();
+        const nombre = item.textContent.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '');
         item.style.display = nombre.includes(texto) ? '' : 'none';
       });
     });
