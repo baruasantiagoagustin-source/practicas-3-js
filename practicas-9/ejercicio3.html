@@ -36,9 +36,9 @@
     <script>
         const nombre = document.getElementById('nombres');
         const span = document.getElementById('span');
-        nombre.addEventListener('input', (event) => {
-            event.preventDefault();
-            span.textContent = `${nombre.value}`;
+
+        nombre.addEventListener('input', function (event) {
+            span.textContent = event.target.value;
         }) 
     </script>
 
