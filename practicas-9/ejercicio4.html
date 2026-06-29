@@ -35,7 +35,17 @@
   <button id="toggle-tema">🌙 Modo oscuro</button>
 
   <script>
-    
+    const oscuridad = document.getElementById('toggle-tema');
+
+    oscuridad.addEventListener('click', () => {
+      document.body.classList.toggle('oscuro');
+
+      if (document.body.classList.contains('oscuro')) {
+        oscuridad.textContent = '☀️ Modo claro';
+      } else {
+        oscuridad.textContent = '🌙 Modo oscuro';
+      }
+    });
   </script>
 
 

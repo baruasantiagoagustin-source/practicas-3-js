@@ -31,15 +31,14 @@
 
     <input id="nombres" placeholder="Escribí tu nombre">
 
-    <p id="saludo">Hola, <span id="span"></span></p>
+    <p id="saludo">Hola, <span id="span">...</span></p>
 
     <script>
-        const nombre = document.getElementById('nombres')
-        const span = document.getElementById('span')
-        span.textContent = `...`
+        const nombre = document.getElementById('nombres');
+        const span = document.getElementById('span');
         nombre.addEventListener('input', (event) => {
-            event.preventDefault()
-            span.textContent = `${nombre.value}`
+            event.preventDefault();
+            span.textContent = `${nombre.value}`;
         }) 
     </script>
 
