@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Arreglo</title>
+</head>
+
+<body>
+    <form action="https://server.com/servicio" method="get" id="El-form">
+        <input type="text" name="nombre" id="nombres" />
+
+        <button>Enviar</button>
+    </form>
+
+    <script>
+        const nombre = document.getElementById('nombres')
+        const form = document.getElementById('El-form')
+        form.addEventListener('submit', (event) => {
+            event.preventDefault()
+            alert(`Hola ${nombre.value}`)
+        })
+    </script>
+</body>
+
+</html>
