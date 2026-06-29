@@ -34,10 +34,12 @@
     <p id="saludo">Hola, <span id="span">...</span></p>
 
     <script>
+       
+
         const nombre = document.getElementById('nombres');
         const span = document.getElementById('span');
 
-        nombre.addEventListener('input', function (event) {
+        nombre.addEventListener('input',  function(event) {
             span.textContent = event.target.value;
         }) 
     </script>
