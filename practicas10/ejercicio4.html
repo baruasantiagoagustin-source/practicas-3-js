@@ -126,19 +126,27 @@
 
   <script>
     const buscador = document.querySelector("#buscador");
+    const sinResultados = document.querySelector("#sin-resultados");
 
     buscador.addEventListener("input", () => {
       const busqueda = buscador.value.toLowerCase();
       const tarjetas = document.querySelectorAll(".jugador");
+      let Coincide = false;
 
-      // TODO: Recorrí las tarjetas con for...of.
-      //   Para cada una:
-      //     - Obtené el texto del .nombre con .textContent y convertilo a minúsculas.
-      //     - Si el nombre incluye el texto buscado, mostrá la tarjeta (style.display = "").
-      //     - Si no, ocultala (style.display = "none").
-      //
-      // TODO: Después del loop, mostrá u ocultá #sin-resultados
-      //       según si quedó alguna tarjeta visible.
+      for (const jugador of tarjetas) {
+        const nombre = jugador.querySelector(".nombre").textContent.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '');
+// .normalize('NFD'), transforma las letras con tilde, en dos caracteres separados uno con la letra sin nada y la tilde suelta a un lado. El .replace busca y elimina todos los caracteres que son '´'
+        if (nombre.includes(busqueda)) {
+          jugador.style.display = "";
+          Coincide = true;
+        } else {
+          jugador.style.display = "none";
+        }
+      }
+
+      sinResultados.style.display = Coincide ? "none" : "block";
+
+
     });
   </script>
 
