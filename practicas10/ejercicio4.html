@@ -128,25 +128,27 @@
     const buscador = document.querySelector("#buscador");
     const sinResultados = document.querySelector("#sin-resultados");
 
+    function normalizarTexto(texto) {
+      return texto.toLowerCase().normalize("NFD").replace(/\p{M}/gu, "");
+    }
+
     buscador.addEventListener("input", () => {
-      const busqueda = buscador.value.toLowerCase();
+      const busqueda = normalizarTexto(buscador.value);
       const tarjetas = document.querySelectorAll(".jugador");
-      let Coincide = false;
+      let coincide = false;
 
       for (const jugador of tarjetas) {
-        const nombre = jugador.querySelector(".nombre").textContent.toLowerCase().normalize('NFD').replace(/\p{M}/gu, '');
-// .normalize('NFD'), transforma las letras con tilde, en dos caracteres separados uno con la letra sin nada y la tilde suelta a un lado. El .replace busca y elimina todos los caracteres que son '´'
+        const nombre = normalizarTexto(jugador.querySelector(".nombre").textContent);
+
         if (nombre.includes(busqueda)) {
           jugador.style.display = "";
-          Coincide = true;
+          coincide = true;
         } else {
           jugador.style.display = "none";
         }
       }
 
-      sinResultados.style.display = Coincide ? "none" : "block";
-
-
+      sinResultados.style.display = coincide ? "none" : "block";
     });
   </script>
 
