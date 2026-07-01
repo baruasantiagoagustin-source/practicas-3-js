@@ -131,7 +131,7 @@
     function normalizarTexto(texto) {
       return texto.toLowerCase().normalize("NFD").replace(/\p{M}/gu, "");
     }
-
+// .normalize devuelve dos strings del input normal, donde un carater = á termina dando 'a' y uno sin la a pero con la tilde. Luego con el .replace se busca globalmente para reemplazar todas las tildes sueltas en string vacio. 
     buscador.addEventListener("input", () => {
       const busqueda = normalizarTexto(buscador.value);
       const tarjetas = document.querySelectorAll(".jugador");
